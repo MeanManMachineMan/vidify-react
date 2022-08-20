@@ -1,10 +1,13 @@
 import type { NextPage } from 'next'
-import 'tailwindcss/tailwind.css'
+import { Header } from '../src/components/header'
+import { Login } from '../src/components/login'
 
 const Home: NextPage = () => {
   return (
-    <div className="p-3">
+    <div className="p-3 flex items-center ">
+      <Header/>
       Welcome to Vidify!
+        <Login/>
     </div>
   )
 }

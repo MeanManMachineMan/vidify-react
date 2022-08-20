@@ -1,0 +1,2 @@
+export const RESPONSE_TYPE = "code";
+export const SCOPES = "user-read-playback-state user-modify-playback-state user-read-private playlist-read-collaborative user-read-email playlist-read-private user-read-currently-playing"
