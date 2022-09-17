@@ -42,6 +42,7 @@ jobs:
       with:
         project_id: ${{ env.PROJECT_ID }}
         workload_identity_provider: ${{ env.PROVIDER_ID }}
+        service_account: 'service-account@vidify-ui.iam.gserviceaccount.com'
         token_format: 'access_token'
     
     - name: 'Docker authenticate with OAuth 2.0'
