@@ -20,8 +20,8 @@ env:
 	CLUSTER: vidify-ui
 	
 permissions:
-  id-token: write # This is required for requesting the JWT
-  contents: read # This is required to checkout the repo
+  id-token: 'write' # This is required for requesting the JWT
+  contents: 'read' # This is required to checkout the repo
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
