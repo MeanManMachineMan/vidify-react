@@ -38,7 +38,7 @@ jobs:
     
     - id: 'auth'
       name: 'Authenticate action with Google Cloud'
-      uses: 'google-github-actions/auth@0'
+      uses: 'google-github-actions/auth@v0'
       with:
         project_id: ${{ env.PROJECT_ID }}
         workload_identity_provider: ${{ env.PROVIDER_ID }}
