@@ -47,3 +47,6 @@ jobs:
     
     - name: 'Docker authenticate with OAuth 2.0'
       run: echo ${{ steps.auth.outputs.access_token }} | docker login -u oauth2accesstoken --password-stdin https://vidify-docker.pkg.dev | docker build .
+    
+    - name: 'Push to Google Artifact Registry'
+      run: docker push 'https://vidify-docker.pkg.dev'
