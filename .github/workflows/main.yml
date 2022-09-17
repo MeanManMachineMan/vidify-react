@@ -16,6 +16,7 @@ on:
 env:
   PROJECT_ID: ${{ secrets.PROJECT_ID}}
   PROVIDER_ID: ${{ secrets.PROVIDER_ID }}
+  ARTIFACT-ZONE: asia-south1
   REGION: asia-south1-a
   CLUSTER: vidify-ui
   
