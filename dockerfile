@@ -1,7 +1,7 @@
 FROM node:7.10 as build-env
 WORKDIR /usr/src/app
 COPY package.json package-lock.json ./
-RUN npm
+RUN npm i
 COPY . ./
 RUN npm run build
 
