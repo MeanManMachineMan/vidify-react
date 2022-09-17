@@ -36,7 +36,7 @@ jobs:
     - name: 'Checkout' 
       uses: actions/checkout@v3
     
-    -	id: 'auth'
+    - id: 'auth'
       name: 'Authenticate action with Google Cloud'
       uses: google-github-actions/auth@v8
       with:
