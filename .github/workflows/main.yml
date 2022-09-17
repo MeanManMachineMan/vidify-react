@@ -49,4 +49,4 @@ jobs:
       run: echo ${{ steps.auth.outputs.access_token }} | docker login -u oauth2accesstoken --password-stdin https://vidify-docker.pkg.dev | docker build .
     
     - name: 'Push to Google Artifact Registry'
-      run: docker push 'https://vidify-docker.pkg.dev'
+      run: docker push 'https://$LOCATION-docker.pkg.dev/vidify-docker:1.0'
