@@ -50,4 +50,4 @@ jobs:
       run: echo ${{ steps.auth.outputs.access_token }} | docker login -u oauth2accesstoken --password-stdin https://vidify-docker.pkg.dev | docker build .
     
     - name: 'Push to Google Artifact Registry'
-      run: docker push "$ARTIFACT_REGION-docker.pkg.dev/$PROJECT_ID/vidify-docker:1.0"
+      run: docker push "$ARTIFACT_REGION-docker.pkg.dev/$PROJECT_ID/vidify-ui:$GITHBUB_SHA"
