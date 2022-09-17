@@ -1,11 +1,11 @@
-FROM node:7.10 as build-env
+FROM node:latest as build-env
 WORKDIR /usr/src/app
 COPY package.json package-lock.json ./
 RUN npm i
 COPY . ./
 RUN npm run build
 
-FROM nginx:1.12-alpine
+FROM nginx:latest
 COPY --from=build-env /usr/src/app/build /usr/share/nginx/html
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
