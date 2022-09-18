@@ -47,7 +47,7 @@ jobs:
         token_format: 'access_token'
     
     - name: 'Docker authenticate with OAuth 2.0'
-      run: echo ${{ steps.auth.outputs.access_token }} | docker login -u oauth2accesstoken --password-stdin https://$ARTIFACT_REGION-docker.pkg.dev | docker build . -t "$ARTIFACT_REGION-docker.pkg.dev/$PROJECT_ID/vidify-ui/image:$GITHUB_SHA"
+      run: echo ${{ steps.auth.outputs.access_token }} | docker login -u oauth2accesstoken --password-stdin https://asia-south1-docker.pkg.dev | docker build . -t "asia-south1-docker.pkg.dev/vidify-ui/vidify-ui/image:$GITHUB_SHA"
     
     - name: 'Push to Google Artifact Registry'
-      run: docker push "$ARTIFACT_REGION-docker.pkg.dev/$PROJECT_ID/vidify-ui/image:$GITHUB_SHA"
+      run: docker push "asia-south1-docker.pkg.dev/vidify-ui/vidify-ui/image:$GITHUB_SHA"
